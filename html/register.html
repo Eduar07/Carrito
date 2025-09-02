@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse - FakeStore</title>
+    <link rel="stylesheet" href="/Carrito/css/style.css">
+    <link rel="stylesheet" href="/Carrito/css/auth.css">
+</head>
+<body>
+    <!-- Header Simplificado -->
+    <header class="auth-header">
+        <div class="header-container">
+            <a href="home.html" class="logo">FakeStore</a>
+            <a href="home.html" class="back-link">← Volver al inicio</a>
+        </div>
+    </header>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="auth-container register-container">
+            <div class="auth-card">
+                <div class="auth-header-content">
+                    <h1>Crea tu cuenta</h1>
+                    <p>Únete a miles de compradores satisfechos</p>
+                </div>
+
+                <!-- Progress Indicator -->
+                <div class="progress-indicator">
+                    <div class="progress-step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Datos Personales</span>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Información de Contacto</span>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Crear Contraseña</span>
+                    </div>
+                </div>
+
+                <form id="registerForm" class="auth-form">
+                    <!-- Step 1: Personal Data -->
+                    <div class="form-step active" id="step1">
+                        <h3>Información Personal</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nombre *</label>
+                                <input 
+                                    type="text" 
+                                    id="firstName" 
+                                    name="firstName" 
+                                    required 
+                                    placeholder="Juan"
+                                >
+                                <span class="error-message"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Apellido *</label>
+                                <input 
+                                    type="text" 
+                                    id="lastName" 
+                                    name="lastName" 
+                                    required 
+                                    placeholder="Pérez"
+                                >
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="idType">Tipo de Documento *</label>
+                            <select id="idType" name="idType" required>
+                                <option value="">Selecciona...</option>
+                                <option value="CC">Cédula de Ciudadanía</option>
+                                <option value="CE">Cédula de Extranjería</option>
+                                <option value="PA">Pasaporte</option>
+                                <option value="NIT">NIT</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="idNumber">Número de Documento *</label>
+                            <input 
+                                type="text" 
+                                id="idNumber" 
+                                name="idNumber" 
+                                required 
+                                placeholder="1234567890"
+                            >
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="birthDate">Fecha de Nacimiento *</label>
+                            <input 
+                                type="date" 
+                                id="birthDate" 
+                                name="birthDate" 
+                                required
+                                max="2006-12-31"
+                            >
+                            <span class="error-message"></span>
+                        </div>
+
+                        <button type="button" class="btn-next" onclick="nextStep(2)">
+                            Siguiente →
+                        </button>
+                    </div>
+
+                    <!-- Step 2: Contact Information -->
+                    <div class="form-step" id="step2">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="tu@email.com"
+                            >
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Teléfono Celular *</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                required 
+                                placeholder="300 000 0000"
+                            >
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Dirección *</label>
+                            <input 
+                                type="text" 
+                                id="address" 
+                                name="address" 
+                                required 
+                                placeholder="Calle 45 #23-67"
+                            >
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">Ciudad *</label>
+                                <input 
+                                    type="text" 
+                                    id="city" 
+                                    name="city" 
+                                    required 
+                                    placeholder="Bucaramanga"
+                                >
+                                <span class="error-message"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="department">Departamento *</label>
+                                <select id="department" name="department" required>
+                                    <option value="">Selecciona...</option>
+                                    <option value="Santander">Santander</option>
+                                    <option value="Cundinamarca">Cundinamarca</option>
+                                    <option value="Antioquia">Antioquia</option>
+                                    <option value="Valle">Valle del Cauca</option>
+                                    <option value="Atlantico">Atlántico</option>
+                                    <option value="Bolivar">Bolívar</option>
+                                    <!-- Agregar más departamentos según necesidad -->
+                                </select>
+                                <span class="error-message"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn-back" onclick="nextStep(1)">
+                                ← Anterior
+                            </button>
+                            <button type="button" class="btn-next" onclick="nextStep(3)">
+                                Siguiente →
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Create Password -->
+                    <div class="form-step" id="step3">
+                        <h3>Crear Contraseña</h3>
+                        
+                        <div class="form-group">
+                            <label for="password">Contraseña *</label>
+                            <div class="password-input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    name="password" 
+                                    required 
+                                    placeholder="Mínimo 8 caracteres"
+                                >
+                                <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                                    👁️
+                                </button>
+                            </div>
+                            <div class="password-requirements">
+                                <p>La contraseña debe contener:</p>
+                                <ul>
+                                    <li id="length">✗ Mínimo 8 caracteres</li>
+                                    <li id="uppercase">✗ Una letra mayúscula</li>
+                                    <li id="lowercase">✗ Una letra minúscula</li>
+                                    <li id="number">✗ Un número</li>
+                                </ul>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirmar Contraseña *</label>
+                            <div class="password-input-wrapper">
+                                <input 
+                                    type="password" 
+                                    id="confirmPassword" 
+                                    name="confirmPassword" 
+                                    required 
+                                    placeholder="Repite tu contraseña"
+                                >
+                                <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                                    👁️
+                                </button>
+                            </div>
+                            <span class="error-message"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" id="terms" required>
+                                <span>Acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a></span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" id="newsletter">
+                                <span>Deseo recibir ofertas y promociones por correo</span>
+                            </label>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="button" class="btn-back" onclick="nextStep(2)">
+                                ← Anterior
+                            </button>
+                            <button type="submit" class="btn-submit">
+                                Crear Cuenta
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+                </div>
+
+                <div id="registerMessage" class="message"></div>
+            </div>
+
+            <!-- Benefits Side -->
+            <div class="auth-features">
+                <h2>Beneficios de registrarte</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="feature-icon">🎁</span>
+                        <div>
+                            <h4>10% de descuento</h4>
+                            <p>En tu primera compra al registrarte</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🚚</span>
+                        <div>
+                            <h4>Envío gratis</h4>
+                            <p>En compras superiores a $100.000</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💳</span>
+                        <div>
+                            <h4>Múltiples pagos</h4>
+                            <p>Guarda tus métodos de pago favoritos</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🏆</span>
+                        <div>
+                            <h4>Programa de puntos</h4>
+                            <p>Acumula puntos y canjéalos por productos</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📱</span>
+                        <div>
+                            <h4>App móvil</h4>
+                            <p>Acceso exclusivo a nuestra app</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="security-note">
+                    <span class="security-icon">🔒</span>
+                    <p>Tu información está segura con nosotros. Utilizamos encriptación de nivel bancario.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simplificado -->
+    <footer class="auth-footer-bottom">
+        <p>&copy; 2024 FakeStore. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#">Términos</a>
+            <a href="#">Privacidad</a>
+            <a href="contact.html">Ayuda</a>
+        </div>
+    </footer>
+
+    <script src="/Carrito/js/auth.js"></script>
+</body>
+</html>

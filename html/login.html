@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - FakeStore</title>
+    <link rel="stylesheet" href="/Carrito/css/style.css">
+    <link rel="stylesheet" href="/Carrito/css/auth.css">
+</head>
+<body>
+    <!-- Header Simplificado -->
+    <header class="auth-header">
+        <div class="header-container">
+            <a href="home.html" class="logo">FakeStore</a>
+            <a href="home.html" class="back-link">← Volver al inicio</a>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="auth-section">
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header-content">
+                    <h1>Bienvenido de vuelta</h1>
+                    <p>Inicia sesión para continuar comprando</p>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">Correo Electrónico</label>
+                        <input 
+                            type="email" 
+                            id="loginEmail" 
+                            name="email" 
+                            required 
+                            placeholder="tu@email.com"
+                            autocomplete="email"
+                        >
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Contraseña</label>
+                        <div class="password-input-wrapper">
+                            <input 
+                                type="password" 
+                                id="loginPassword" 
+                                name="password" 
+                                required 
+                                placeholder="••••••••"
+                                autocomplete="current-password"
+                            >
+                            <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
+                                👁️
+                            </button>
+                        </div>
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember" id="rememberMe">
+                            <span>Recordarme</span>
+                        </label>
+                        <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Iniciar Sesión</button>
+
+                    <div class="divider">
+                        <span>O continúa con</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="social-btn google">
+                            <span>🔍</span> Google
+                        </button>
+                        <button type="button" class="social-btn facebook">
+                            <span>📘</span> Facebook
+                        </button>
+                    </div>
+                </form>
+
+                <div class="auth-footer">
+                    <p>¿No tienes una cuenta? <a href="register.html">Regístrate aquí</a></p>
+                </div>
+
+                <div id="loginMessage" class="message"></div>
+            </div>
+
+            <!-- Features Side -->
+            <div class="auth-features">
+                <h2>¿Por qué crear una cuenta?</h2>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="feature-icon">🚀</span>
+                        <div>
+                            <h4>Compras más rápidas</h4>
+                            <p>Guarda tu información para futuras compras</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📦</span>
+                        <div>
+                            <h4>Seguimiento de pedidos</h4>
+                            <p>Rastrea tus envíos en tiempo real</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💰</span>
+                        <div>
+                            <h4>Ofertas exclusivas</h4>
+                            <p>Accede a descuentos solo para miembros</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">❤️</span>
+                        <div>
+                            <h4>Lista de favoritos</h4>
+                            <p>Guarda productos para comprar después</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simplificado -->
+    <footer class="auth-footer-bottom">
+        <p>&copy; 2024 FakeStore. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#">Términos</a>
+            <a href="#">Privacidad</a>
+            <a href="contact.html">Ayuda</a>
+        </div>
+    </footer>
+
+    <script src="/Carrito/js/auth.js"></script>
+</body>
+</html>
