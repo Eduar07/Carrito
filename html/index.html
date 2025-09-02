@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakeStore - Tu Tienda Online</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">FakeStore</a>
+            
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    class="search-input" 
+                    id="searchInput" 
+                    placeholder="Buscar productos..."
+                >
+                <span class="search-icon">🔍</span>
+            </div>
+            
+            <button class="cart-button" id="cartButton">
+                <span>🛒</span>
+                <span>Mi Carrito</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Filters -->
+    <div class="filters-container">
+        <div class="filters-wrapper">
+            <div class="filter-group">
+                <label class="filter-label">Categoría</label>
+                <select class="filter-select" id="categoryFilter">
+                    <option value="">Todas las categorías</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label class="filter-label">Ordenar por</label>
+                <select class="filter-select" id="sortFilter">
+                    <option value="">Relevancia</option>
+                    <option value="price-asc">Precio: Menor a Mayor</option>
+                    <option value="price-desc">Precio: Mayor a Menor</option>
+                    <option value="name-asc">Nombre: A-Z</option>
+                    <option value="name-desc">Nombre: Z-A</option>
+                    <option value="rating">Mejor Valorados</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label class="filter-label">Rango de Precio</label>
+                <select class="filter-select" id="priceRangeFilter">
+                    <option value="">Todos los precios</option>
+                    <option value="0-25">$0 - $25</option>
+                    <option value="25-50">$25 - $50</option>
+                    <option value="50-100">$50 - $100</option>
+                    <option value="100-200">$100 - $200</option>
+                    <option value="200+">$200+</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="products-container">
+        <div id="productsGrid" class="products-grid">
+            <!-- Los productos se cargarán dinámicamente aquí -->
+            <div class="loading-container">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2 class="cart-title">
+                    <span>🛒</span>
+                    Mi Carrito
+                </h2>
+                <button class="close-cart" id="closeCart">&times;</button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <div class="empty-cart-icon">🛒</div>
+                    <p>Tu carrito está vacío</p>
+                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">¡Agrega algunos productos!</p>
+                </div>
+            </div>
+            
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <span class="total-label">Total:</span>
+                    <span class="total-value" id="totalValue">$0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Proceder al Pago</button>
+                <button class="clear-cart-btn" id="clearCartBtn">Vaciar Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span class="notification-icon"></span>
+        <span class="notification-message"></span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Acerca de FakeStore</h3>
+                <p>Tu tienda online de confianza con los mejores productos y precios competitivos. Compra seguro y recibe en la puerta de tu casa.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li>Inicio</li>
+                    <li>Productos</li>
+                    <li>Ofertas</li>
+                    <li>Contacto</li>
+                    <li>Ayuda</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <ul id="footerCategories">
+                    <li>Electrónica</li>
+                    <li>Joyería</li>
+                    <li>Ropa de Hombre</li>
+                    <li>Ropa de Mujer</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Síguenos</h3>
+                <p>Mantente conectado con nuestras redes sociales para conocer las últimas ofertas y novedades.</p>
+                <div style="margin-top: 1rem; font-size: 1.5rem;">
+                    <span style="margin-right: 1rem; cursor: pointer;">📘</span>
+                    <span style="margin-right: 1rem; cursor: pointer;">📷</span>
+                    <span style="margin-right: 1rem; cursor: pointer;">🐦</span>
+                    <span style="cursor: pointer;">📱</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 FakeStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/app.js"></script>
+</body>
+</html>

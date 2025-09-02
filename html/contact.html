@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - FakeStore</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="home.html" class="logo">FakeStore</a>
+            
+            <nav class="nav-menu">
+                <a href="home.html" class="nav-link">Inicio</a>
+                <a href="index.html" class="nav-link">Productos</a>
+                <a href="about.html" class="nav-link">Nosotros</a>
+                <a href="contact.html" class="nav-link active">Contacto</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="login.html" class="btn-login">Iniciar Sesión</a>
+                <a href="register.html" class="btn-register">Registrarse</a>
+            </div>
+            
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para ayudarte. Déjanos tus datos y te contactaremos pronto.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Envíanos un mensaje</h2>
+                    <p>Completa el formulario y nuestro equipo te contactará en las próximas 24 horas.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nombre *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Apellido *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Teléfono *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+57 300 000 0000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="ventas">Información de Ventas</option>
+                                <option value="soporte">Soporte Técnico</option>
+                                <option value="pedidos">Estado de Pedido</option>
+                                <option value="devoluciones">Devoluciones</option>
+                                <option value="sugerencias">Sugerencias</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Deseo recibir ofertas y novedades por correo</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
+                    </form>
+                    
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-section">
+                    <div class="info-card">
+                        <h3>Información de Contacto</h3>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@fakestore.com</p>
+                                <p>ventas@fakestore.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📱</div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+57 322 755 6850</p>
+                                <p>Línea Nacional: 01 8000 123 456</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <h4>Dirección</h4>
+                                <p>Calle 45 #23-67</p>
+                                <p>Bucaramanga, Santander</p>
+                                <p>Colombia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">🕐</div>
+                            <div>
+                                <h4>Horario de Atención</h4>
+                                <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                                <p>Sábados: 9:00 AM - 2:00 PM</p>
+                                <p>Domingos: Cerrado</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp Card -->
+                    <div class="whatsapp-card">
+                        <h3>💬 Contáctanos por WhatsApp</h3>
+                        <p>¿Prefieres chatear? Escríbenos directamente a WhatsApp para una respuesta inmediata.</p>
+                        <a href="https://wa.me/573227556850?text=Hola,%20me%20gustaría%20obtener%20información%20sobre%20sus%20productos" 
+                           class="whatsapp-button" 
+                           target="_blank">
+                            <span class="whatsapp-icon">📱</span>
+                            Chatear en WhatsApp
+                        </a>
+                        <p class="whatsapp-number">+57 322 755 6850</p>
+                    </div>
+                    
+                    <!-- Social Media -->
+                    <div class="social-card">
+                        <h3>Síguenos en Redes Sociales</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link facebook">📘 Facebook</a>
+                            <a href="#" class="social-link instagram">📷 Instagram</a>
+                            <a href="#" class="social-link twitter">🐦 Twitter</a>
+                            <a href="#" class="social-link youtube">📺 YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Map Section -->
+            <div class="map-section">
+                <h2>Encuéntranos</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.056578664!2d-73.12!3d7.12!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDcnMTIuMCJOIDczwrAwNycxMi4wIlc!5e0!3m2!1ses!2sco!4v1635959425811!5m2!1ses!2sco"
+                        width="100%" 
+                        height="400" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+            
+            <!-- FAQ Section -->
+            <div class="faq-section">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>¿Cuánto tiempo tarda la respuesta?</h4>
+                        <p>Normalmente respondemos en menos de 24 horas hábiles.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>¿Puedo programar una llamada?</h4>
+                        <p>Sí, déjanos tus datos y te llamaremos en el horario que prefieras.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>¿Tienen tienda física?</h4>
+                        <p>Sí, puedes visitarnos en nuestra dirección en Bucaramanga.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>¿Atienden fines de semana?</h4>
+                        <p>Los sábados hasta las 2:00 PM. Domingos cerrado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>FakeStore</h3>
+                <p>Tu tienda de confianza desde 2024.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="home.html">Inicio</a></li>
+                    <li><a href="index.html">Productos</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Devoluciones</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Suscríbete para recibir ofertas exclusivas</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu email">
+                    <button type="submit">Suscribir</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 FakeStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573227556850?text=Hola,%20necesito%20ayuda" 
+       class="whatsapp-float" 
+       target="_blank"
+       title="Chatea con nosotros">
+        <span>💬</span>
+    </a>
+
+    <script src="/js/navegation.js"></script>
+    <script src="/js/contact.js"></script>
+</body>
+</html>
