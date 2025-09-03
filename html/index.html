@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FakeStore - Tu Tienda Online</title>
     <link rel="stylesheet" href="/Carrito/css/style.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <div class="header-container">
             <a href="http://127.0.0.1:5500/Carrito/html/home.html" class="logo">FakeStore</a>
-            
+
             <div class="search-container">
-                <input 
-                    type="text" 
-                    class="search-input" 
-                    id="searchInput" 
-                    placeholder="Buscar productos..."
-                >
+                <input type="text" class="search-input" id="searchInput" placeholder="Buscar productos...">
                 <span class="search-icon">🔍</span>
             </div>
-            
+
             <button class="cart-button" id="cartButton">
                 <span>🛒</span>
                 <span>Mi Carrito</span>
@@ -39,7 +36,7 @@
                     <option value="">Todas las categorías</option>
                 </select>
             </div>
-            
+
             <div class="filter-group">
                 <label class="filter-label">Ordenar por</label>
                 <select class="filter-select" id="sortFilter">
@@ -51,7 +48,7 @@
                     <option value="rating">Mejor Valorados</option>
                 </select>
             </div>
-            
+
             <div class="filter-group">
                 <label class="filter-label">Rango de Precio</label>
                 <select class="filter-select" id="priceRangeFilter">
@@ -86,7 +83,7 @@
                 </h2>
                 <button class="close-cart" id="closeCart">&times;</button>
             </div>
-            
+
             <div class="cart-items" id="cartItems">
                 <div class="empty-cart">
                     <div class="empty-cart-icon">🛒</div>
@@ -94,7 +91,7 @@
                     <p style="font-size: 0.875rem; margin-top: 0.5rem;">¡Agrega algunos productos!</p>
                 </div>
             </div>
-            
+
             <div class="cart-footer" id="cartFooter" style="display: none;">
                 <div class="cart-total">
                     <span class="total-label">Total:</span>
@@ -117,9 +114,10 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Acerca de FakeStore</h3>
-                <p>Tu tienda online de confianza con los mejores productos y precios competitivos. Compra seguro y recibe en la puerta de tu casa.</p>
+                <p>Tu tienda online de confianza con los mejores productos y precios competitivos. Compra seguro y
+                    recibe en la puerta de tu casa.</p>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
@@ -130,7 +128,7 @@
                     <li>Ayuda</li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Categorías</h3>
                 <ul id="footerCategories">
@@ -140,19 +138,21 @@
                     <li>Ropa de Mujer</li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Síguenos</h3>
                 <p>Mantente conectado con nuestras redes sociales para conocer las últimas ofertas y novedades.</p>
                 <div style="margin-top: 1rem; font-size: 1.5rem;">
-                    <span style="margin-right: 1rem; cursor: pointer;">📘</span>
-                    <span style="margin-right: 1rem; cursor: pointer;">📷</span>
-                    <span style="margin-right: 1rem; cursor: pointer;">🐦</span>
-                    <span style="cursor: pointer;">📱</span>
+                    <a href="https://www.facebook.com/login/?locale=es_LA" target="_blank"
+                        style="margin-right: 1rem; text-decoration: none;">📘</a>
+                    <a href="https://www.instagram.com/" target="_blank"
+                        style="margin-right: 1rem; text-decoration: none;">📷</a>
+                    <a href="https://x.com/" target="_blank" style="margin-right: 1rem; text-decoration: none;">🐦</a>
+                    <a href="https://wa.me/1234567890" target="_blank" style="text-decoration: none;">📱</a>
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>&copy; 2024 FakeStore. Todos los derechos reservados.</p>
         </div>
@@ -161,4 +161,5 @@
     <!-- Scripts -->
     <script src="/Carrito/js/app.js"></script>
 </body>
+
 </html>
