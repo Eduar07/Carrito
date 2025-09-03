@@ -1,23 +1,64 @@
-/* Navigation Menu */
-.nav-menu {
+/* ========================================
+   css/contact.css - VERSIÓN RESPONSIVE COMPLETA
+   ======================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
     align-items: center;
 }
 
-.nav-link {
-    color: var(--dark-color);
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
     text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: var(--primary-color);
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: #1e293b;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.nav-link.active,
+.nav-link:hover {
     background: rgba(37, 99, 235, 0.1);
+    color: #2563eb;
 }
 
 .header-actions {
@@ -25,48 +66,40 @@
     gap: 1rem;
 }
 
-.btn-login,
-.btn-register {
+.btn-login {
+    color: #2563eb;
+    border: 2px solid #2563eb;
     padding: 0.625rem 1.25rem;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.btn-login {
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.btn-login:hover {
-    background: var(--primary-color);
-    color: white;
+    transition: all 0.3s;
 }
 
 .btn-register {
-    background: var(--primary-color);
+    background: #2563eb;
     color: white;
+    padding: 0.625rem 1.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
 }
 
-.btn-register:hover {
-    background: var(--primary-hover);
-    transform: translateY(-2px);
-}
-
+/* Hamburger Menu - Oculto por defecto */
 .menu-toggle {
     display: none;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     cursor: pointer;
+    padding: 0.25rem;
+    color: #1e293b;
 }
 
 /* ========================================
-   css/contact.css - Estilos para página de contacto
+   CONTACT HERO
    ======================================== */
 
-   .contact-hero {
+.contact-hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     padding: 4rem 2rem;
@@ -78,9 +111,23 @@
     margin-bottom: 1rem;
 }
 
+.contact-hero p {
+    font-size: 1.25rem;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ========================================
+   CONTACT CONTENT
+   ======================================== */
+
 .contact-content {
     padding: 4rem 2rem;
-    background: var(--light-color);
+    background: #f8fafc;
 }
 
 .contact-grid {
@@ -91,12 +138,22 @@
     margin: 0 auto;
 }
 
-/* Contact Form */
+/* Contact Form Section */
+.contact-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-section p {
+    color: #64748b;
+    margin-bottom: 2rem;
+}
+
 .contact-form {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .form-row {
@@ -113,7 +170,7 @@
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: var(--dark-color);
+    color: #1e293b;
 }
 
 .form-group input,
@@ -121,17 +178,17 @@
 .form-group textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 2px solid var(--border-color);
+    border: 2px solid #e2e8f0;
     border-radius: 8px;
     font-size: 1rem;
-    transition: var(--transition);
+    transition: all 0.3s;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: #2563eb;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
@@ -142,7 +199,7 @@
 }
 
 .btn-submit {
-    background: var(--primary-color);
+    background: #2563eb;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -150,12 +207,12 @@
     font-size: 1.125rem;
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
     width: 100%;
+    transition: all 0.3s;
 }
 
 .btn-submit:hover {
-    background: var(--primary-hover);
+    background: #1d4ed8;
     transform: translateY(-2px);
 }
 
@@ -166,29 +223,20 @@
     display: none;
 }
 
-.form-message.success {
-    background: #d1fae5;
-    color: #065f46;
-    border: 1px solid #6ee7b7;
-    display: block;
+/* Contact Info Section */
+.contact-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.form-message.error {
-    background: #fee2e2;
-    color: #991b1b;
-    border: 1px solid #fca5a5;
-    display: block;
-}
-
-/* Contact Info */
 .info-card,
 .whatsapp-card,
 .social-card {
     background: white;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .info-item {
@@ -197,14 +245,27 @@
     margin-bottom: 1.5rem;
 }
 
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
 .info-icon {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: #2563eb;
 }
 
 .info-item h4 {
     margin-bottom: 0.25rem;
-    color: var(--dark-color);
+    color: #1e293b;
+}
+
+.info-item p {
+    color: #64748b;
+}
+
+/* WhatsApp Card */
+.whatsapp-card h3 {
+    margin-bottom: 1rem;
 }
 
 .whatsapp-button {
@@ -218,9 +279,9 @@
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: var(--transition);
     width: 100%;
     margin: 1rem 0;
+    transition: all 0.3s;
 }
 
 .whatsapp-button:hover {
@@ -231,30 +292,48 @@
 .whatsapp-number {
     text-align: center;
     font-weight: 600;
-    color: var(--dark-color);
+    color: #1e293b;
 }
 
-.whatsapp-float {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 60px;
-    height: 60px;
-    background: #25d366;
-    border-radius: 50%;
+/* Social Card */
+.social-card h3 {
+    margin-bottom: 1rem;
+}
+
+.social-links {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    text-decoration: none;
-    box-shadow: var(--shadow-lg);
-    transition: var(--transition);
-    z-index: 100;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background: #128c7e;
+.social-link {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-link.facebook {
+    background: #1877f2;
+    color: white;
+}
+
+.social-link.instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+}
+
+.social-link.twitter {
+    background: #1da1f2;
+    color: white;
+}
+
+.social-link.youtube {
+    background: #ff0000;
+    color: white;
 }
 
 /* Map Section */
@@ -262,15 +341,27 @@
     margin-top: 3rem;
 }
 
+.map-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 .map-container {
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 /* FAQ Section */
 .faq-section {
     margin-top: 3rem;
+}
+
+.faq-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
 .faq-grid {
@@ -284,21 +375,47 @@
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .faq-item h4 {
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    color: #2563eb;
 }
 
-/* Footer mejorado */
+.faq-item p {
+    color: #64748b;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: #128c7e;
+}
+
+/* Footer */
 footer {
-    background: var(--dark-color);
+    background: #1e293b;
     color: white;
     padding: 3rem 2rem 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .footer-content {
@@ -328,19 +445,41 @@ footer {
 
 .footer-section ul li {
     margin-bottom: 0.5rem;
-    cursor: pointer;
-    transition: var(--transition);
 }
 
 .footer-section ul li a {
     color: #94a3b8;
     text-decoration: none;
+    transition: all 0.3s;
 }
 
-.footer-section ul li:hover,
 .footer-section ul li a:hover {
     color: white;
-    transform: translateX(5px);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: transparent;
+    color: white;
+}
+
+.newsletter-form button {
+    padding: 0.75rem 1.5rem;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .footer-bottom {
@@ -350,40 +489,368 @@ footer {
     color: #94a3b8;
 }
 
-/* Social Links */
-.social-links {
+/* ========================================
+   RESPONSIVE - TABLET (770px)
+   ======================================== */
+
+@media (max-width: 770px) {
+    /* Header responsive */
+    .nav-menu {
+        display: none !important;
+    }
+    
+    .header-actions {
+        display: none !important;
+    }
+    
+    .menu-toggle {
+        display: block !important;
+    }
+    
+    /* Contact Grid - CAMBIO IMPORTANTE */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* Form responsive */
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Info cards orden */
+    .contact-info-section {
+        order: -1; /* Mover info arriba del formulario */
+    }
+    
+    /* Social links responsive */
+    .social-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    
+    .social-link {
+        min-width: auto;
+    }
+    
+    /* Map responsive */
+    .map-container iframe {
+        height: 300px;
+    }
+    
+    /* FAQ Grid */
+    .faq-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVIL (500px y menos)
+   ======================================== */
+
+@media (max-width: 500px) {
+    /* Header móvil */
+    .header-container {
+        padding: 0.75rem 1rem;
+    }
+    
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    .menu-toggle {
+        font-size: 1.5rem;
+    }
+    
+    /* Contact Hero móvil */
+    .contact-hero {
+        padding: 2rem 1rem;
+    }
+    
+    .contact-hero h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-hero p {
+        font-size: 0.95rem;
+    }
+    
+    /* Contact Content móvil */
+    .contact-content {
+        padding: 2rem 1rem;
+    }
+    
+    /* Form móvil simplificado */
+    .contact-form-section h2 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    
+    .contact-form-section p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .contact-form {
+        padding: 1.25rem 1rem;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Previene zoom en iOS */
+        padding: 0.625rem;
+    }
+    
+    .form-group textarea {
+        min-height: 80px; /* Más pequeño en móvil */
+    }
+    
+    .btn-submit {
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+    
+    /* Info Cards móvil */
+    .info-card,
+    .whatsapp-card,
+    .social-card {
+        padding: 1.25rem;
+        text-align: center;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .info-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .info-item h4 {
+        font-size: 1rem;
+    }
+    
+    .info-item p {
+        font-size: 0.875rem;
+    }
+    
+    /* Ocultar info card de horario en móvil */
+    .info-card .info-item:nth-child(4) {
+        display: none;
+    }
+    
+    /* WhatsApp card móvil */
+    .whatsapp-card h3 {
+        font-size: 1.125rem;
+    }
+    
+    .whatsapp-button {
+        padding: 0.875rem;
+        font-size: 0.9rem;
+    }
+    
+    .whatsapp-number {
+        font-size: 0.875rem;
+    }
+    
+    /* Social links móvil */
+    .social-card {
+        display: none; /* Ocultar en móvil muy pequeño */
+    }
+    
+    /* Map section móvil */
+    .map-section {
+        display: none; /* Ocultar mapa en móvil */
+    }
+    
+    /* FAQ móvil - solo 2 items */
+    .faq-section h2 {
+        font-size: 1.25rem;
+    }
+    
+    .faq-item {
+        padding: 1rem;
+    }
+    
+    .faq-item:nth-child(n+3) {
+        display: none;
+    }
+    
+    .faq-item h4 {
+        font-size: 1rem;
+    }
+    
+    .faq-item p {
+        font-size: 0.875rem;
+    }
+    
+    /* WhatsApp Float más pequeño */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    /* Footer móvil CENTRADO */
+    footer {
+        padding: 2rem 1rem 1rem;
+        text-align: center;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-section {
+        padding: 0;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+        text-align: center;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    
+    .footer-section ul {
+        text-align: center;
+    }
+    
+    .footer-section ul li {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Ocultar secciones del footer */
+    .footer-section:nth-child(2),
+    .footer-section:nth-child(3) {
+        display: none;
+    }
+    
+    /* Newsletter responsive */
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input {
+        font-size: 16px;
+    }
+    
+    .newsletter-form button {
+        padding: 0.625rem;
+        font-size: 0.9rem;
+    }
+    
+    .footer-bottom {
+        padding-top: 1.5rem;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   MENÚ MÓVIL - ESTILOS
+   ======================================== */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+.mobile-menu.active {
     display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
 }
 
-.social-link {
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: var(--transition);
+.mobile-menu-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
 }
 
-.social-link:hover {
-    transform: scale(1.2);
+.mobile-menu-content {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    z-index: 1001;
+    animation: slideIn 0.3s ease;
 }
 
-.whatsapp-btn {
-    display: inline-block;
-    background: #25d366;
+.mobile-menu-header {
+    padding: 1.5rem;
+    background: #2563eb;
     color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
+}
+
+.mobile-nav {
+    padding: 1rem 0;
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #1e293b;
     text-decoration: none;
-    margin-top: 1rem;
-    transition: var(--transition);
+    transition: background 0.2s;
 }
 
-.whatsapp-btn:hover {
-    background: #128c7e;
-    transform: translateY(-2px);
+.mobile-nav a:hover {
+    background: #f8fafc;
 }
 
-/* Prevenir scroll horizontal global */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* Prevenir scroll horizontal */
 * {
     max-width: 100%;
 }

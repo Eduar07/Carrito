@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="/Carrito/css/style.css">
     <link rel="stylesheet" href="/Carrito/css/auth.css">
 </head>
+
 <body>
     <!-- Header Simplificado -->
     <header class="auth-header">
@@ -27,29 +29,17 @@
 
                 <form id="loginForm" class="auth-form">
                     <div class="form-group">
-                        <label for="loginEmail">Correo Electrónico</label>
-                        <input 
-                            type="email" 
-                            id="loginEmail" 
-                            name="email" 
-                            required 
-                            placeholder="tu@email.com"
-                            autocomplete="email"
-                        >
+                        <label for="loginEmail">Correo Electrónico</label><br>
+                        <input type="email" id="loginEmail" name="email" required placeholder="tu@email.com"
+                            autocomplete="email">
                         <span class="error-message" id="emailError"></span>
                     </div>
 
                     <div class="form-group">
                         <label for="loginPassword">Contraseña</label>
                         <div class="password-input-wrapper">
-                            <input 
-                                type="password" 
-                                id="loginPassword" 
-                                name="password" 
-                                required 
-                                placeholder="••••••••"
-                                autocomplete="current-password"
-                            >
+                            <input type="password" id="loginPassword" name="password" required placeholder="••••••••"
+                                autocomplete="current-password">
                             <button type="button" class="toggle-password" onclick="togglePassword('loginPassword')">
                                 👁️
                             </button>
@@ -62,7 +52,7 @@
                             <input type="checkbox" name="remember" id="rememberMe">
                             <span>Recordarme</span>
                         </label>
-                        <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
+                        <a href="forgot-password.html" class="forgot-link">¿Olvidaste tu contraseña?</a>
                     </div>
 
                     <button type="submit" class="btn-submit">Iniciar Sesión</button>
@@ -72,12 +62,12 @@
                     </div>
 
                     <div class="social-login">
-                        <button type="button" class="social-btn google">
+                        <a href="https://mail.google.com/mail/u/0/#inbox" class="social-btn google">
                             <span>🔍</span> Google
-                        </button>
-                        <button type="button" class="social-btn facebook">
+                        </a>
+                        <a href="https://www.facebook.com/" class="social-btn facebook">
                             <span>📘</span> Facebook
-                        </button>
+                        </a>
                     </div>
                 </form>
 
@@ -137,4 +127,5 @@
 
     <script src="/Carrito/js/auth.js"></script>
 </body>
+
 </html>

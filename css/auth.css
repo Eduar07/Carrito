@@ -1,71 +1,28 @@
-/* Navigation Menu */
-.nav-menu {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+/* ========================================
+   css/auth.css - LOGIN Y REGISTRO RESPONSIVE
+   ======================================== */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nav-link {
-    color: var(--dark-color);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: var(--primary-color);
-    background: rgba(37, 99, 235, 0.1);
-}
-
-.header-actions {
-    display: flex;
-    gap: 1rem;
-}
-
-.btn-login,
-.btn-register {
-    padding: 0.625rem 1.25rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.btn-login {
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-.btn-login:hover {
-    background: var(--primary-color);
-    color: white;
-}
-
-.btn-register {
-    background: var(--primary-color);
-    color: white;
-}
-
-.btn-register:hover {
-    background: var(--primary-hover);
-    transform: translateY(-2px);
-}
-
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
+/* ========================================
+   HEADER SIMPLIFICADO
+   ======================================== */
 
 .auth-header {
     background: white;
     padding: 1.5rem 2rem;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .auth-header .header-container {
@@ -76,40 +33,59 @@
     align-items: center;
 }
 
-.back-link {
-    color: var(--secondary-color);
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2563eb;
     text-decoration: none;
-    transition: var(--transition);
+}
+
+.back-link {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 .back-link:hover {
-    color: var(--primary-color);
+    color: #2563eb;
 }
+
+/* ========================================
+   AUTH SECTION
+   ======================================== */
 
 .auth-section {
     min-height: calc(100vh - 200px);
     padding: 3rem 2rem;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .auth-container {
     max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
 }
 
+/* Para registro con 3 columnas */
 .register-container {
     grid-template-columns: 2fr 1fr;
 }
+
+/* ========================================
+   AUTH CARD
+   ======================================== */
 
 .auth-card {
     background: white;
     padding: 3rem;
     border-radius: 12px;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .auth-header-content {
@@ -120,13 +96,56 @@
 .auth-header-content h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    color: var(--dark-color);
+    color: #1e293b;
 }
+
+.auth-header-content p {
+    color: #64748b;
+}
+
+/* ========================================
+   FORMULARIOS
+   ======================================== */
 
 .auth-form {
     margin-top: 2rem;
 }
 
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Password Input */
 .password-input-wrapper {
     position: relative;
 }
@@ -140,8 +159,10 @@
     border: none;
     cursor: pointer;
     font-size: 1.25rem;
+    color: #64748b;
 }
 
+/* Form Options */
 .form-options {
     display: flex;
     justify-content: space-between;
@@ -157,7 +178,7 @@
 }
 
 .forgot-link {
-    color: var(--primary-color);
+    color: #2563eb;
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -166,6 +187,48 @@
     text-decoration: underline;
 }
 
+/* Buttons */
+.btn-submit,
+.btn-next,
+.btn-back {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-submit {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    font-size: 1.125rem;
+}
+
+.btn-submit:hover {
+    background: #1d4ed8;
+}
+
+.btn-next {
+    background: #2563eb;
+    color: white;
+    border: none;
+}
+
+.btn-back {
+    background: transparent;
+    border: 2px solid #e2e8f0;
+    color: #64748b;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Divider */
 .divider {
     text-align: center;
     margin: 2rem 0;
@@ -179,25 +242,30 @@
     top: 50%;
     width: 100%;
     height: 1px;
-    background: var(--border-color);
+    background: #e2e8f0;
 }
 
 .divider span {
     background: white;
     padding: 0 1rem;
     position: relative;
-    color: var(--secondary-color);
+    color: #64748b;
 }
 
+/* Social Login */
 .social-login {
     display: flex;
     gap: 1rem;
 }
+.social-login a {
+    text-decoration: none;
+}
+
 
 .social-btn {
     flex: 1;
     padding: 0.75rem;
-    border: 2px solid var(--border-color);
+    border: 2px solid #e2e8f0;
     background: white;
     border-radius: 8px;
     cursor: pointer;
@@ -206,26 +274,46 @@
     justify-content: center;
     gap: 0.5rem;
     font-weight: 500;
-    transition: var(--transition);
+    transition: all 0.3s;
 }
 
 .social-btn:hover {
-    background: var(--light-color);
+    background: #f8fafc;
     transform: translateY(-2px);
 }
 
+/* Auth Footer */
 .auth-footer {
     text-align: center;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid #e2e8f0;
 }
+
+.auth-footer a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   FEATURES SIDEBAR
+   ======================================== */
 
 .auth-features {
     background: white;
     padding: 3rem;
     border-radius: 12px;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-features h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #1e293b;
 }
 
 .feature-list {
@@ -240,10 +328,23 @@
 
 .feature-icon {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: #2563eb;
 }
 
-/* Progress Indicator for Registration */
+.feature-item h4 {
+    margin-bottom: 0.25rem;
+    color: #1e293b;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* ========================================
+   REGISTRO - PROGRESS INDICATOR
+   ======================================== */
+
 .progress-indicator {
     display: flex;
     justify-content: space-between;
@@ -258,7 +359,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--border-color);
+    background: #e2e8f0;
     z-index: 0;
 }
 
@@ -276,28 +377,28 @@
     height: 40px;
     border-radius: 50%;
     background: white;
-    border: 2px solid var(--border-color);
+    border: 2px solid #e2e8f0;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: #64748b;
 }
 
 .progress-step.active .step-number {
-    background: var(--primary-color);
+    background: #2563eb;
     color: white;
-    border-color: var(--primary-color);
+    border-color: #2563eb;
 }
 
 .step-label {
     font-size: 0.875rem;
-    color: var(--secondary-color);
+    color: #64748b;
     text-align: center;
 }
 
 .progress-step.active .step-label {
-    color: var(--primary-color);
+    color: #2563eb;
     font-weight: 600;
 }
 
@@ -311,45 +412,14 @@
     animation: fadeIn 0.3s ease;
 }
 
-.form-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.btn-back,
-.btn-next {
-    flex: 1;
-    padding: 0.75rem;
-    border-radius: 8px;
-    border: none;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn-back {
-    background: transparent;
-    border: 2px solid var(--border-color);
-    color: var(--secondary-color);
-}
-
-.btn-back:hover {
-    background: var(--light-color);
-}
-
-.btn-next {
-    background: var(--primary-color);
-    color: white;
-}
-
-.btn-next:hover {
-    background: var(--primary-hover);
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Password Requirements */
 .password-requirements {
-    background: var(--light-color);
+    background: #f8fafc;
     padding: 1rem;
     border-radius: 8px;
     margin-top: 0.5rem;
@@ -368,11 +438,11 @@
 
 .password-requirements li {
     margin-bottom: 0.25rem;
-    color: var(--danger-color);
+    color: #ef4444;
 }
 
 .password-requirements li.valid {
-    color: var(--success-color);
+    color: #10b981;
 }
 
 /* Security Note */
@@ -390,45 +460,310 @@
     font-size: 1.5rem;
 }
 
-/* Error Messages */
-.error-message {
-    color: var(--danger-color);
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
-    display: none;
+.security-note p {
+    font-size: 0.9rem;
+    color: #0369a1;
 }
 
-.error-message.active {
-    display: block;
-}
-
-/* Message */
-.message {
+/* Messages */
+.message,
+#loginMessage,
+#registerMessage {
     margin-top: 1rem;
     padding: 1rem;
     border-radius: 8px;
-      }
+    display: none;
+}
 
-      .auth-footer-bottom {
-        background: white;
+.message.success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #6ee7b7;
+    display: block;
+}
+
+.message.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+    display: block;
+}
+
+/* Footer Bottom */
+.auth-footer-bottom {
+    background: white;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #e2e8f0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: #64748b;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #2563eb;
+}
+
+/* ========================================
+   RESPONSIVE - TABLET (800px)
+   ======================================== */
+
+@media (max-width: 800px) {
+    /* Auth Section */
+    .auth-section {
+        padding: 2rem 1rem;
+        min-height: calc(100vh - 150px);
+    }
+    
+    /* Auth Container - Una columna */
+    .auth-container,
+    .register-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    /* Auth Card */
+    .auth-card {
         padding: 2rem;
+    }
+    
+    .auth-header-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    /* Features - Ocultar en tablet/móvil */
+    .auth-features {
+        display: none;
+    }
+    
+    /* Form Row - Una columna */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Progress Indicator - Solo números */
+    .step-label {
+        display: none;
+    }
+    
+    .progress-step {
+        gap: 0;
+    }
+    
+    /* Form Options responsive */
+    .form-options {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    /* Social Login */
+    .social-login {
+        flex-direction: column;
+    }
+    
+    .social-btn {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MÓVIL (500px)
+   ======================================== */
+
+@media (max-width: 500px) {
+    /* Header móvil */
+    .auth-header {
+        padding: 1rem;
+    }
+    
+    .auth-header .header-container {
+        flex-direction: column;
+        gap: 0.5rem;
         text-align: center;
-        border-top: 1px solid var(--border-color);
+    }
+    
+    .logo {
+        font-size: 1.25rem;
+    }
+    
+    .back-link {
+        font-size: 0.875rem;
+    }
+    
+    /* Auth Section móvil */
+    .auth-section {
+        padding: 1.5rem 0.75rem;
+        background: white; /* Simplificar fondo */
+    }
+    
+    /* Auth Card móvil */
+    .auth-card {
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .auth-header-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .auth-header-content p {
+        font-size: 0.9rem;
+    }
+    
+    /* Formularios móvil */
+    .auth-form {
+        margin-top: 1.5rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 0.625rem;
+        font-size: 16px; /* Prevenir zoom en iOS */
+    }
+    
+    /* Progress Indicator móvil */
+    .progress-indicator {
+        margin-bottom: 1.5rem;
+    }
+    
+    .step-number {
+        width: 32px;
+        height: 32px;
+        font-size: 0.875rem;
+    }
+    
+    /* Buttons móvil */
+    .btn-submit {
+        padding: 0.875rem;
+        font-size: 1rem;
+    }
+    
+    .btn-next,
+    .btn-back {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .form-buttons button {
+        width: 100%;
+    }
+    
+    /* Password Requirements móvil */
+    .password-requirements {
+        padding: 0.75rem;
+    }
+    
+    .password-requirements p,
+    .password-requirements ul {
+        font-size: 0.8rem;
+    }
+    
+    /* Security Note móvil */
+    .security-note {
+        padding: 0.75rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .security-note p {
+        font-size: 0.85rem;
+    }
+    
+    /* Divider móvil */
+    .divider {
+        margin: 1.5rem 0;
+    }
+    
+    .divider span {
+        font-size: 0.875rem;
+    }
+    
+    /* Auth Footer móvil */
+    .auth-footer {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer Bottom móvil */
+    .auth-footer-bottom {
+        padding: 1.5rem 1rem;
+    }
+    
+    .auth-footer-bottom p {
+        font-size: 0.75rem;
     }
     
     .footer-links {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        margin-top: 1rem;
+        gap: 1rem;
+        font-size: 0.875rem;
     }
     
-    .footer-links a {
-        color: var(--secondary-color);
-        text-decoration: none;
+    /* Checkbox label móvil */
+    .checkbox-label {
+        font-size: 0.875rem;
     }
     
-    .footer-links a:hover {
-        color: var(--primary-color);
+    .checkbox-label a {
+        display: inline;
+    }
+}
+
+/* ========================================
+   AJUSTES ADICIONALES MÓVIL PEQUEÑO (350px)
+   ======================================== */
+
+@media (max-width: 350px) {
+    .auth-card {
+        padding: 1rem;
     }
     
+    .auth-header-content h1 {
+        font-size: 1.25rem;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 0.5rem;
+    }
+    
+    .btn-submit {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Prevenir scroll horizontal */
+* {
+    max-width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
