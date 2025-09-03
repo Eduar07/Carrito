@@ -890,3 +890,187 @@ footer {
 section {
     overflow-x: hidden;
 }
+/* ========================================
+   AGREGAR AL FINAL DE tu archivo CSS de index
+   (después del código existente)
+   ======================================== */
+
+/* ========================================
+   FOOTER RESPONSIVE PARA INDEX
+   ======================================== */
+
+@media (max-width: 500px) {
+    /* Footer centrado en móvil */
+    footer {
+        padding: 2rem 1rem 1rem;
+        text-align: center;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-section {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+        text-align: center;
+    }
+    
+    .footer-section p {
+        font-size: 0.9rem;
+        text-align: center;
+        max-width: 90%;
+    }
+    
+    .footer-section ul {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-section ul li {
+        margin-bottom: 0.5rem;
+        transform: none !important;
+        text-align: center;
+    }
+    
+    .footer-section ul li a {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    /* Social links centrados */
+    .social-links {
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    .social-link {
+        font-size: 1.75rem;
+    }
+    
+    /* WhatsApp button centrado */
+    .whatsapp-btn {
+        display: inline-block;
+        margin: 1rem auto 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Footer bottom */
+    .footer-bottom {
+        padding-top: 1.5rem;
+        font-size: 0.75rem;
+        text-align: center;
+    }
+    
+    /* Ocultar algunas secciones en móvil muy pequeño para simplificar */
+    .footer-section:nth-child(2) {
+        display: none; /* Ocultar Enlaces Rápidos */
+    }
+    
+    .footer-section:nth-child(3) {
+        display: none; /* Ocultar Cuenta */
+    }
+}
+
+/* ========================================
+   AJUSTES ADICIONALES PARA MÓVIL MUY PEQUEÑO
+   ======================================== */
+
+@media (max-width: 350px) {
+    footer {
+        padding: 1.5rem 0.75rem 1rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1rem;
+    }
+    
+    .footer-section p {
+        font-size: 0.85rem;
+    }
+    
+    .social-link {
+        font-size: 1.5rem;
+    }
+    
+    .footer-bottom {
+        font-size: 0.7rem;
+    }
+}
+
+/* ========================================
+   SI NECESITAS MANTENER TODAS LAS SECCIONES
+   (Alternativa sin ocultar secciones)
+   ======================================== */
+
+
+@media (max-width: 500px) {
+    footer {
+        padding: 2rem 1rem 1rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+        padding: 1rem 0;
+        border-bottom: 1px solid #334155;
+    }
+    
+    .footer-section:last-child {
+        border-bottom: none;
+    }
+    
+    .footer-section h3 {
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+    }
+    
+    .footer-section p,
+    .footer-section ul li,
+    .footer-section ul li a {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+    
+    .footer-section ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        padding: 0;
+    }
+    
+    .footer-section ul li {
+        transform: none !important;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin: 1rem 0;
+    }
+    
+    .whatsapp-btn {
+        width: 80%;
+        max-width: 200px;
+        margin: 1rem auto;
+        display: block;
+        text-align: center;
+    }
+}
