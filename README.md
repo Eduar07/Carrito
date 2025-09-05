@@ -247,3 +247,275 @@ Mantenibilidad: Código modular y bien organizado
 Escalabilidad: Estructura preparada para crecer
 
 La arquitectura elegida permite fácil mantenimiento y extensión de funcionalidades, mientras que las decisiones de UX están basadas en mejores prácticas de la industria del e-commerce.
+
+
+
+
+# 📝 BOCETO ESCRITO - en word
+## Guía completa para dibujar el diseño paso a paso
+
+---
+
+## 🎨 **ESTRUCTURA GENERAL DE LA PÁGINA**
+
+### **📐 Dimensiones de la hoja:**
+- **Orientación:** Vertical (Portrait)
+- **Divisiones:** 5 secciones principales de arriba hacia abajo
+
+---
+
+## 🔝 **SECCIÓN 1: HEADER (Cabecera) - 15% de la página**
+
+### **📏 Medidas:**
+- **Alto:** 3-4 cm desde la parte superior
+- **Ancho:** Todo el ancho de la hoja
+
+### **🎯 Contenido del Header (de izquierda a derecha):**
+
+**Lado IZQUIERDO (25% del ancho):**
+```
+┌─────────────────┐
+│  🏪 FakeStore   │  ← Logo grande y llamativo
+└─────────────────┘
+```
+
+**Centro (50% del ancho):**
+```
+┌──────────────────────────────────┐
+│  🔍 [Buscar productos...]        │  ← Barra de búsqueda rectangular
+└──────────────────────────────────┘
+```
+
+**Lado DERECHO (25% del ancho):**
+```
+┌─────────────────┐
+│  🛒 Mi Carrito  │  ← Botón con ícono
+│      (3)        │  ← Número en círculo rojo
+└─────────────────┘
+```
+
+### **✏️ Instrucciones para dibujar:**
+1. Dibuja un rectángulo horizontal en la parte superior
+2. Divide en 3 columnas (25% - 50% - 25%)
+3. En la primera columna: escribe "FakeStore" con un ícono de tienda
+4. En la columna central: dibuja un rectángulo con esquinas redondeadas y escribe "Buscar productos..."
+5. En la última columna: dibuja un botón con ícono de carrito y un círculo pequeño con el número "3"
+
+---
+
+## 🔍 **SECCIÓN 2: FILTROS - 10% de la página**
+
+### **📏 Medidas:**
+- **Alto:** 2 cm
+- **Ancho:** Todo el ancho de la hoja
+
+### **🎯 Contenido de Filtros (3 columnas iguales):**
+
+```
+┌─────────────┐  ┌─────────────┐  ┌─────────────┐
+│ Categoría   │  │ Ordenar por │  │ Rango Precio│
+│     ▼       │  │     ▼       │  │     ▼       │
+└─────────────┘  └─────────────┘  └─────────────┘
+```
+
+### **✏️ Instrucciones para dibujar:**
+1. Dibuja un rectángulo horizontal debajo del header
+2. Divide en 3 columnas iguales
+3. En cada columna dibuja un rectángulo con esquinas redondeadas
+4. Escribe el texto y agrega una flecha hacia abajo (▼) en cada uno
+
+---
+
+## 🛍️ **SECCIÓN 3: PRODUCTOS - 60% de la página**
+
+### **📏 Medidas:**
+- **Alto:** Resto de la hoja (aproximadamente 12-15 cm)
+- **Distribución:** Grid de 3 columnas x 2 filas = 6 productos
+
+### **🎯 Diseño de cada tarjeta de producto:**
+
+```
+┌─────────────────────┐
+│                     │
+│    [📷 IMAGEN]      │  ← Cuadrado para imagen
+│                     │
+│─────────────────────│
+│ Nombre del Producto │  ← Título
+│ ⭐⭐⭐⭐⭐ (4.5)      │  ← Estrellas y rating
+│                     │
+│     $99.99          │  ← Precio en grande
+│                     │
+│   [+ Agregar]       │  ← Botón verde
+└─────────────────────┘
+```
+
+### **✏️ Instrucciones para dibujar:**
+1. Divide esta sección en una cuadrícula de 3x2 (3 columnas, 2 filas)
+2. Deja espacios entre cada tarjeta
+3. Para cada tarjeta:
+   - Dibuja un rectángulo vertical
+   - En la parte superior: un cuadrado para la imagen
+   - Debajo: líneas para el nombre del producto
+   - Línea para estrellas (dibuja 5 estrellas)
+   - Línea para el precio (números grandes)
+   - En la parte inferior: un rectángulo pequeño para el botón "Agregar"
+
+---
+
+## 🛒 **SECCIÓN 4: MODAL DEL CARRITO (Lateral)**
+
+### **📏 Ubicación:**
+- **Posición:** Lado derecho de la página (como una ventana flotante)
+- **Tamaño:** 30% del ancho de la página
+
+### **🎯 Contenido del Modal:**
+
+```
+┌─────────────────────────┐
+│ 🛒 Mi Carrito        ✕ │  ← Header con botón cerrar
+├─────────────────────────┤
+│                         │
+│ ┌─────┐ Producto 1      │  ← Lista de productos
+│ │ IMG │ $99.99          │
+│ └─────┘ [- 2 +] [🗑️]   │
+│                         │
+│ ┌─────┐ Producto 2      │
+│ │ IMG │ $149.99         │
+│ └─────┘ [- 1 +] [🗑️]   │
+│                         │
+├─────────────────────────┤
+│ Total: $249.98          │  ← Total
+│                         │
+│ [Proceder al Pago]      │  ← Botón grande azul
+│ [Vaciar Carrito]        │  ← Botón pequeño rojo
+└─────────────────────────┘
+```
+
+### **✏️ Instrucciones para dibujar:**
+1. Dibuja un rectángulo vertical en el lado derecho
+2. Divide en: header, contenido, y footer
+3. En el header: título y X para cerrar
+4. En el contenido: lista de productos con imagen pequeña, precio, y controles
+5. En el footer: total y botones
+
+---
+
+## 📱 **SECCIÓN 5: VERSIÓN MÓVIL (Opcional)**
+
+### **🎯 Diferencias para móvil:**
+
+```
+┌─────────────────┐
+│ ☰  FakeStore 🛒 │  ← Header compacto
+├─────────────────┤
+│   [Buscar...]   │  ← Búsqueda en línea separada
+├─────────────────┤
+│    [Filtros]    │  ← Botón de filtros
+├─────────────────┤
+│                 │
+│   [Producto]    │  ← Una columna
+│                 │
+├─────────────────┤
+│   [Producto]    │  ← Una columna
+│                 │
+└─────────────────┘
+```
+
+---
+
+## 🎨 **GUÍA DE COLORES (Para pintar después)**
+
+### **🎯 Paleta de colores sugerida:**
+- **Header:** Azul (#3498db)
+- **Botón Carrito:** Verde (#27ae60)
+- **Tarjetas Producto:** Blanco con borde gris
+- **Botón Agregar:** Verde claro
+- **Precios:** Verde oscuro
+- **Fondo general:** Gris muy claro (#f5f5f5)
+
+---
+
+## ✏️ **PASOS PARA DIBUJAR COMPLETO:**
+
+### **🎯 PASO 1: Preparación (5 minutos)**
+1. Toma una hoja tamaño carta en orientación vertical
+2. Dibuja márgenes de 1 cm en todos los lados
+3. Divide la hoja en 5 secciones horizontales
+
+### **🎯 PASO 2: Header (10 minutos)**
+1. Dibuja rectángulo superior (15% de la hoja)
+2. Divide en 3 columnas (25% - 50% - 25%)
+3. Agrega logo, barra búsqueda, y botón carrito
+
+### **🎯 PASO 3: Filtros (5 minutos)**
+1. Dibuja franja horizontal debajo del header
+2. Agrega 3 cajas para filtros
+3. Escribe textos y agrega flechas
+
+### **🎯 PASO 4: Grid de Productos (20 minutos)**
+1. Dibuja cuadrícula 3x2
+2. Para cada producto: imagen, título, estrellas, precio, botón
+3. Agrega detalles como estrellas y precios
+
+### **🎯 PASO 5: Modal Carrito (10 minutos)**
+1. Dibuja rectángulo vertical en lado derecho
+2. Agrega header, lista productos, y footer
+3. Incluye controles de cantidad y botones
+
+### **🎯 PASO 6: Detalles Finales (10 minutos)**
+1. Agrega sombras a las tarjetas
+2. Refuerza líneas importantes
+3. Añade íconos y decoraciones
+
+---
+
+## 📐 **MEDIDAS ESPECÍFICAS (para hoja tamaño carta)**
+
+### **📏 Dimensiones exactas:**
+- **Header:** 3 cm de alto
+- **Filtros:** 2 cm de alto  
+- **Cada tarjeta producto:** 6 cm alto x 5 cm ancho
+- **Espacios entre tarjetas:** 0.5 cm
+- **Modal carrito:** 7 cm ancho x 15 cm alto
+
+### **🎯 Proporciones importantes:**
+- **Logo:** 20% del header
+- **Búsqueda:** 50% del header
+- **Botón carrito:** 20% del header
+- **Imagen producto:** 60% de la altura de la tarjeta
+- **Información producto:** 40% de la altura de la tarjeta
+
+---
+
+## 💡 **TIPS PARA UN BUEN BOCETO:**
+
+1. **Usa líneas rectas:** Ayúdate con una regla
+2. **Proporciones claras:** Respeta los porcentajes
+3. **Jerarquía visual:** El título más grande, subtítulos medianos, texto pequeño
+4. **Espacios blancos:** No llenes todo, deja respirar el diseño
+5. **Consistencia:** Mismo estilo para elementos similares
+
+---
+
+## 🔍 **ELEMENTOS CLAVE A INCLUIR:**
+
+### **✅ Obligatorios:**
+- [ ] Logo "FakeStore"
+- [ ] Barra de búsqueda
+- [ ] Botón carrito con contador
+- [ ] 3 filtros (Categoría, Orden, Precio)
+- [ ] Grid de 6 productos mínimo
+- [ ] Modal de carrito con productos
+- [ ] Botones de agregar/quitar
+- [ ] Total del carrito
+- [ ] Botón de checkout
+
+### **⭐ Extras:**
+- [ ] Estrellas de rating
+- [ ] Badge "Popular" en productos
+- [ ] Ícono de eliminar producto
+- [ ] Notificación de éxito
+- [ ] Versión móvil alternativa
+
+---
+
