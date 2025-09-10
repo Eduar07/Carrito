@@ -1,7 +1,4 @@
-// ========================================
-// ESTADO DE LA APLICACIÓN
-// ========================================
-
+//aplicacion//
 const state = {
     products: [],
     filteredProducts: [],
@@ -9,10 +6,7 @@ const state = {
     categories: []
 };
 
-// ========================================
-// SELECTORES DOM
-// ========================================
-
+//selectores dom//
 const elements = {
     productsGrid: document.getElementById('productsGrid'),
     searchInput: document.getElementById('searchInput'),
@@ -31,9 +25,7 @@ const elements = {
     notification: document.getElementById('notification')
 };
 
-// ========================================
-// FUNCIONES DE LA API
-// ========================================
+//api//
 
 async function fetchProducts() {
     try {
@@ -68,159 +60,7 @@ async function fetchProducts() {
     }
 }
 
-// ========================================
-// DATOS DE RESPALDO
-// ========================================
-
-function loadBackupData() {
-    const backupProducts = [
-        {
-            id: 1,
-            title: "Mochila Fjallraven - Foldsack No. 1",
-            price: 109.95,
-            description: "Tu mochila perfecta para el día a día y paseos por el bosque.",
-            category: "men's clothing",
-            image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-            rating: { rate: 3.9, count: 120 }
-        },
-        {
-            id: 2,
-            title: "Camiseta Premium para Hombre",
-            price: 22.3,
-            description: "Camisetas ajustadas de corte slim con cuello redondo.",
-            category: "men's clothing",
-            image: "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-            rating: { rate: 4.1, count: 259 }
-        },
-        {
-            id: 3,
-            title: "Chaqueta de Algodón para Hombre",
-            price: 55.99,
-            description: "Gran chaqueta de abrigo para primavera/otoño/invierno.",
-            category: "men's clothing",
-            image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-            rating: { rate: 4.7, count: 500 }
-        },
-        {
-            id: 4,
-            title: "Camisa Casual Slim Fit",
-            price: 15.99,
-            description: "El color puede variar ligeramente entre la pantalla y la realidad.",
-            category: "men's clothing",
-            image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-            rating: { rate: 2.1, count: 430 }
-        },
-        {
-            id: 5,
-            title: "Pulsera de Mujer con Cadena de Dragón",
-            price: 695,
-            description: "De nuestra colección Legends, el Naga se inspiró en el mítico dragón de agua.",
-            category: "jewelery",
-            image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-            rating: { rate: 4.6, count: 400 }
-        },
-        {
-            id: 6,
-            title: "Anillo de Oro Sólido",
-            price: 168,
-            description: "Satisfacción garantizada. Devuelve o cambia cualquier pedido dentro de 30 días.",
-            category: "jewelery",
-            image: "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-            rating: { rate: 3.9, count: 70 }
-        },
-        {
-            id: 7,
-            title: "Anillo de Diamante Blanco",
-            price: 9.99,
-            description: "Anillo de promesa clásico creado para ella.",
-            category: "jewelery",
-            image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-            rating: { rate: 3, count: 400 }
-        },
-        {
-            id: 8,
-            title: "Aros de Acero Inoxidable",
-            price: 10.99,
-            description: "Aros con túnel doble chapados en oro rosa.",
-            category: "jewelery",
-            image: "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-            rating: { rate: 1.9, count: 100 }
-        },
-        {
-            id: 9,
-            title: "Disco Duro Portátil WD 2TB",
-            price: 64,
-            description: "Compatibilidad con USB 3.0 y USB 2.0.",
-            category: "electronics",
-            image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-            rating: { rate: 3.3, count: 203 }
-        },
-        {
-            id: 10,
-            title: "SSD Interno SanDisk",
-            price: 109,
-            description: "Fácil actualización para un arranque más rápido.",
-            category: "electronics",
-            image: "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
-            rating: { rate: 2.9, count: 470 }
-        },
-        {
-            id: 11,
-            title: "Monitor Gaming ASUS 27 pulgadas",
-            price: 599,
-            description: "Monitor gaming de 27 pulgadas con 144Hz de frecuencia de actualización.",
-            category: "electronics",
-            image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
-            rating: { rate: 4.8, count: 319 }
-        },
-        {
-            id: 12,
-            title: "Chaqueta de Lluvia para Mujer",
-            price: 39.99,
-            description: "Chaqueta ligera con capucha, ideal para clima lluvioso.",
-            category: "women's clothing",
-            image: "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
-            rating: { rate: 3.8, count: 679 }
-        },
-        {
-            id: 13,
-            title: "Chaqueta de Cuero para Mujer",
-            price: 29.95,
-            description: "Chaqueta de cuero sintético con capucha removible.",
-            category: "women's clothing",
-            image: "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
-            rating: { rate: 2.9, count: 340 }
-        },
-        {
-            id: 14,
-            title: "Vestido Floral de Verano",
-            price: 28.99,
-            description: "Vestido ligero perfecto para días de verano.",
-            category: "women's clothing",
-            image: "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-            rating: { rate: 4.2, count: 145 }
-        },
-        {
-            id: 15,
-            title: "Blusa Elegante para Mujer",
-            price: 16.99,
-            description: "Blusa de manga corta con diseño elegante.",
-            category: "women's clothing",
-            image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
-            rating: { rate: 3.6, count: 235 }
-        }
-    ];
-
-    state.products = backupProducts;
-    state.filteredProducts = backupProducts;
-    extractCategories();
-    renderProducts();
-    showNotification('Usando datos de demostración (API no disponible)', 'error');
-}
-
-// ========================================
-// FUNCIONES DE RENDERIZADO
-// ========================================
+//renderizado
 
 function extractCategories() {
     const categories = [...new Set(state.products.map(p => p.category))];
@@ -268,11 +108,7 @@ function renderProducts() {
         </div>
     `).join('');
 }
-
-// ========================================
-// FUNCIONES AUXILIARES
-// ========================================
-
+//funciones
 function generateStars(rating) {
     const fullStars = Math.floor(rating);
     const halfStar = rating % 1 >= 0.5 ? 1 : 0;
@@ -297,10 +133,7 @@ function debounce(func, wait) {
     };
 }
 
-// ========================================
-// FUNCIONES DEL CARRITO
-// ========================================
-
+//carrito
 function addToCart(productId) {
     const product = state.products.find(p => p.id === productId);
     if (!product) return;
@@ -373,9 +206,7 @@ function processCheckout() {
     }
 }
 
-// ========================================
-// PERSISTENCIA EN LOCALSTORAGE
-// ========================================
+//LOCALSTORAGE
 
 function saveCart() {
     localStorage.setItem('fakestore_cart', JSON.stringify(state.cart));
@@ -434,10 +265,7 @@ function updateCartUI() {
     }
 }
 
-// ========================================
-// FILTROS Y BÚSQUEDA
-// ========================================
-
+//filtros busquedad
 function filterProducts() {
     let filtered = [...state.products];
 
@@ -492,10 +320,7 @@ function filterProducts() {
     renderProducts();
 }
 
-// ========================================
-// NOTIFICACIONES
-// ========================================
-
+//notification
 function showNotification(message, type = 'success') {
     const notification = elements.notification;
     const icon = notification.querySelector('.notification-icon');
@@ -510,11 +335,7 @@ function showNotification(message, type = 'success') {
         notification.classList.remove('show');
     }, 3000);
 }
-
-// ========================================
-// MODAL DEL CARRITO
-// ========================================
-
+//modal carrito
 function openCartModal() {
     elements.cartModal.classList.add('active');
     document.body.style.overflow = 'hidden';
@@ -525,13 +346,15 @@ function closeCartModal() {
     document.body.style.overflow = '';
 }
 
-// ========================================
-// EVENT LISTENERS
-// ========================================
+//even listeners 
+
+function  productos(){
+    
+}
 
 function initEventListeners() {
     // Búsqueda
-    elements.searchInput.addEventListener('input', debounce(filterProducts, 300));
+    elements.searchInput.addEventListener('input', debounce(filterProducts, 6));
     
     // Filtros
     elements.categoryFilter.addEventListener('change', filterProducts);
@@ -574,6 +397,7 @@ window.removeFromCart = removeFromCart;
 
 // Iniciar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', init);
+
 
 
 
